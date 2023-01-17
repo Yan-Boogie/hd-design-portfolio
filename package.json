@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "theme": "chakra-cli tokens path/to/theme.ts",
-    "theme:watch": "chakra-cli tokens path/to/theme.ts --watch"
+    "theme:watch": "chakra-cli tokens path/to/theme.ts --watch",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.4.8",
@@ -27,6 +29,17 @@
     "typescript": "4.9.4"
   },
   "devDependencies": {
-    "@chakra-ui/cli": "^2.3.0"
+    "@babel/core": "^7.20.12",
+    "@chakra-ui/cli": "^2.3.0",
+    "@storybook/addon-actions": "^6.5.15",
+    "@storybook/addon-essentials": "^6.5.15",
+    "@storybook/addon-interactions": "^6.5.15",
+    "@storybook/addon-links": "^6.5.15",
+    "@storybook/builder-webpack5": "^6.5.15",
+    "@storybook/manager-webpack5": "^6.5.15",
+    "@storybook/react": "^6.5.15",
+    "@storybook/testing-library": "^0.0.13",
+    "babel-loader": "^8.3.0",
+    "eslint-plugin-storybook": "^0.6.10"
   }
 }
