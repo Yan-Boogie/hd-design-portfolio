@@ -8,13 +8,15 @@ import styles from './styles'
 import colors from './foundations/colors'
 
 // Component style overrides
-
+import IconButton from './components/iconButton';
 
 const overrides = {
   styles,
   colors,
   // Other foundational style overrides go here
-  components: {},
+  components: {
+    IconButton,
+  },
 }
 
 export default extendTheme(overrides)
