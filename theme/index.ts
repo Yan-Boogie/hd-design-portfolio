@@ -10,6 +10,7 @@ import colors from './foundations/colors'
 // Component style overrides
 import IconButton from './components/iconButton';
 import Icon from './components/icon';
+import ShowreelWallPaperButton from './components/showreelWallPaperButton';
 
 const overrides = {
   styles,
@@ -18,6 +19,7 @@ const overrides = {
   components: {
     IconButton,
     Icon,
+    ShowreelWallPaperButton,
   },
 }
 

@@ -1,5 +1,5 @@
 import { motion, Variant } from 'framer-motion';
-import { Text, forwardRef, TextProps } from '@chakra-ui/react';
+import { Text as CKUText, forwardRef, TextProps as CKUTextProps } from '@chakra-ui/react';
 
 type TextMotionVariantTypes = 'visible' | 'invisible';
 
@@ -20,16 +20,16 @@ const textVariants: MotionVariant = {
     },
 };
 
-export interface TextMotionProps extends TextProps {
+export interface TextMotionProps extends CKUTextProps {
     getMotionProps: () => { initial: TextMotionVariantTypes; animate: TextMotionVariantTypes } | undefined;
 };
 
-const MotionText = motion(Text);
+const MotionText = motion<CKUTextProps>(CKUText);
 const TextMotion = forwardRef<TextMotionProps, 'p'>((props, ref) => {
     const { getMotionProps, ...rest } = props;
 
     if (typeof getMotionProps !== 'function') {
-        return <Text {...rest} />
+        return <CKUText {...rest} />
     }
 
     return (

@@ -6,21 +6,21 @@ import type { MotionVariantTypes } from './';
 const motionVariantTypes: {
     [K in MotionVariantTypes]: K
 } = {
-    deactivated: 'deactivated',
-    activated: 'activated',
+    inactive: 'inactive',
+    active: 'active',
 };
 
 export interface IconButtonMotionProps extends IconButtonUIProps {};
 
-const MotionIconButton = motion(IconButtonUI);
+const MotionIconButton = motion<IconButtonUIProps>(IconButtonUI);
 const IconButtonMotion = forwardRef<IconButtonMotionProps, 'button'>((props, ref) => {
     const { ...rest } = props;
 
     return (
         <MotionIconButton
             ref={ref}
-            initial={motionVariantTypes.deactivated}
-            whileHover={motionVariantTypes.activated}
+            initial={motionVariantTypes.inactive}
+            whileHover={motionVariantTypes.active}
             {...rest} />
     );
 });
