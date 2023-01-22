@@ -1,10 +1,13 @@
 import IconButtonMotion, { IconButtonMotionProps } from './IconButtonMotion';
-import IconMotion, { IconMotionProps } from '../../icon/iconMotion';
+import Icon, { IconProps } from '../../icon/';
 
-export type MotionVariantTypes = 'inactive' | 'active';
 export type DeactiveIcon = React.ReactElement;
 export type activeIcon = React.ReactElement;
 
+/**
+ * @todo
+ * Clear IconProps to the correct version
+ */
 export interface IconButtonProps extends IconButtonMotionProps {
     iconProps: IconMotionProps;
     iconBundle: [DeactiveIcon, activeIcon];

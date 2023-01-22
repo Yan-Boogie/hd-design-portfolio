@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import { forwardRef } from '@chakra-ui/react'; 
 import IconButtonUI, { IconButtonUIProps } from './IconButtonUI';
-import type { MotionVariantTypes } from './';
 
+type MotionVariantTypes = 'inactive' | 'active';
 const motionVariantTypes: {
     [K in MotionVariantTypes]: K
 } = {
