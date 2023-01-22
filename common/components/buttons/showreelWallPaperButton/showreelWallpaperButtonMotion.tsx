@@ -1,6 +1,7 @@
-import { motion, Variant } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { forwardRef } from '@chakra-ui/react'; 
 import ShowreelWallpaperButtonUI, { MaskUI, ShowreelWallpaperButtonUIProps } from './showreelWallPaperButtonUI';
+import type { MotionVariants } from '@/common/utils/typings';
 
 type MotionVariantTypes = 'hovered' | 'init';
 
@@ -11,15 +12,7 @@ const motionVariantTypes: {
     init: 'init',
 };
 
-/**
- * @todo
- * Build MotionVariant generic type
- */
-type MotionVariant = {
-    [_key in MotionVariantTypes]: Variant;
-}
-
-const maskVariants: MotionVariant = {
+const maskVariants: MotionVariants<MotionVariantTypes> = {
     init: {
         opacity: 0,
     },

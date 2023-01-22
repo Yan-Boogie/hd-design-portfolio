@@ -1,17 +1,11 @@
-import { motion, Variant } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Text as CKUText, forwardRef, TextProps as CKUTextProps } from '@chakra-ui/react';
+import type { MotionVariants } from '@/common/utils/typings';
 
 type TextMotionVariantTypes = 'visible' | 'invisible';
 
-/**
- * @todo
- * Build MotionVariant generic type
- */
-type MotionVariant = {
-    [_key in TextMotionVariantTypes]: Variant;
-}
 
-const textVariants: MotionVariant = {
+const textVariants: MotionVariants<TextMotionVariantTypes> = {
     invisible: {
         opacity: 0,
     },
