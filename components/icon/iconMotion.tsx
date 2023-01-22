@@ -2,9 +2,9 @@ import { motion, Variant } from 'framer-motion';
 import { chakra, forwardRef } from '@chakra-ui/react';
 import IconUI, { IconUIProps } from './iconUI';
 
-type IconMotionVariantType = 'inactive' | 'active';
+type IconMotionVariantsTypes = 'inactive' | 'active';
 type IconMotionVariants = {
-    [_key in IconMotionVariantType]: Variant;
+    [_key in IconMotionVariantsTypes]: Variant;
 };
 
 const initIconVariants: IconMotionVariants = {

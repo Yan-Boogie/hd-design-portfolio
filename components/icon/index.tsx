@@ -1,4 +1,6 @@
-import IconMotion from './iconMotion';
+import IconMotion, { IconMotionProps } from './iconMotion';
+
+export type IconProps = IconMotionProps;
 
 const Icon = IconMotion;
 
