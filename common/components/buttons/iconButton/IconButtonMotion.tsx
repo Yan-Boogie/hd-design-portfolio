@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
 import { forwardRef } from '@chakra-ui/react'; 
 import IconButtonUI, { IconButtonUIProps } from './IconButtonUI';
+import React from 'react';
+
+import { MergeWithMotion, ReactFCWithRef } from 'common/utils/typings';
 
 type MotionVariantTypes = 'inactive' | 'active';
 const motionVariantTypes: {
@@ -10,9 +13,9 @@ const motionVariantTypes: {
     active: 'active',
 };
 
-export interface IconButtonMotionProps extends IconButtonUIProps {};
+export interface IconButtonMotionProps extends MergeWithMotion<IconButtonUIProps> {};
 
-const MotionIconButton = motion<IconButtonUIProps>(IconButtonUI);
+const MotionIconButton: ReactFCWithRef<IconButtonMotionProps> = motion(IconButtonUI);
 const IconButtonMotion = forwardRef<IconButtonMotionProps, 'button'>((props, ref) => {
     const { ...rest } = props;
 
