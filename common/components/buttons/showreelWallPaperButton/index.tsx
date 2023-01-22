@@ -1,6 +1,6 @@
 import { createStylesContext } from '@chakra-ui/react';
 import ShowreelWallpaperButtonMotion from './showreelWallpaperButtonMotion';
-import Icon from '../../icon';
+import Icon from '../../icons';
 import Text from '../../text';
 
 export interface ShowreelWallpaperButtonProps {

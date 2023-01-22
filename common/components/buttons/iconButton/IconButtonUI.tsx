@@ -10,7 +10,7 @@ const IconButton = forwardRef<IconButtonUIProps, 'button'>((props: IconButtonUIP
     const { children, ...rest } = props;
 
     return (
-        <CKUIconButton isRound ref={ref} {...rest}>
+        <CKUIconButton isRound variant="unstyled" ref={ref} {...rest}>
             {children}
         </CKUIconButton>
     );
