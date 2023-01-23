@@ -64,10 +64,10 @@ const IconMotion = forwardRef<IconMotionProps, 'div'>((props, ref) => {
 
     return (
         <chakra.div ref={ref} pos="relative" w="100%" h="100%">
-            <MotionIcon initial="init" variants={initIconVariants} {...rest}>
+            <MotionIcon variants={initIconVariants} {...rest}>
                 {pathBundle[0]}
             </MotionIcon>
-            <MotionIcon initial="init" variants={activeIconVariants} variant="overlap" {...rest}>
+            <MotionIcon variants={activeIconVariants} variant="overlap" {...rest}>
                 {pathBundle[1]}
             </MotionIcon>
         </chakra.div>
