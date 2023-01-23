@@ -4,25 +4,37 @@ import { chakra, forwardRef } from '@chakra-ui/react';
 import IconUI, { IconUIProps } from './iconUI';
 import type { MergeWithMotion, ReactFCWithRef } from '@/common/utils/typings';
 
-type IconMotionVariantsTypes = 'inactive' | 'active';
+type IconMotionVariantsTypes = 'inactive' | 'active' | 'hovered' | 'init';
 type IconMotionVariants = {
     [_key in IconMotionVariantsTypes]: Variant;
 };
 
 const initIconVariants: IconMotionVariants = {
+    init: {
+        opacity: 0,
+    },
     inactive: {
         opacity: 1,
     },
     active: {
         opacity: 0,
     },
+    hovered: {
+        opacity: 0,
+    },
 };
 
 const activeIconVariants: IconMotionVariants = {
+    init: {
+        opacity: 0,
+    },
     inactive: {
         opacity: 0,
     },
     active: {
+        opacity: 1,
+    },
+    hovered: {
         opacity: 1,
     },
 };
@@ -52,10 +64,10 @@ const IconMotion = forwardRef<IconMotionProps, 'div'>((props, ref) => {
 
     return (
         <chakra.div ref={ref} pos="relative" w="100%" h="100%">
-            <MotionIcon variants={initIconVariants} {...rest}>
+            <MotionIcon initial="init" variants={initIconVariants} {...rest}>
                 {pathBundle[0]}
             </MotionIcon>
-            <MotionIcon variants={activeIconVariants} variant="overlap" {...rest}>
+            <MotionIcon initial="init" variants={activeIconVariants} variant="overlap" {...rest}>
                 {pathBundle[1]}
             </MotionIcon>
         </chakra.div>
