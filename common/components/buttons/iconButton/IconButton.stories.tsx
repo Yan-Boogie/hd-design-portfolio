@@ -1,5 +1,4 @@
 import { ComponentMeta } from '@storybook/react';
-import { Box } from '@chakra-ui/react';
 
 import IconButton from './';
 import { CarouselRight } from '../../icons';

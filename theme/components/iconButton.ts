@@ -1,9 +1,9 @@
 import { defineStyleConfig } from '@chakra-ui/react'
 
-const IconButton = defineStyleConfig({
+const IconButtonStyle = defineStyleConfig({
     defaultProps: {
         variant: 'unstyled',
     }
 });
 
-export default IconButton;
+export default IconButtonStyle;
