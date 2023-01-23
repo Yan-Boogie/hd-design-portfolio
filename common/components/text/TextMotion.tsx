@@ -21,8 +21,8 @@ const textVariants: MotionVariants<TextMotionVariantTypes> = {
 
 type MergedMotionProps = MergeWithMotion<CKUTextProps>;
 export interface TextMotionProps extends MergedMotionProps {
-    initial: TextMotionVariantTypes;
-    animate: TextMotionVariantTypes;
+    initial?: TextMotionVariantTypes;
+    animate?: TextMotionVariantTypes;
 };
 
 const MotionText: ReactFCWithRef<MergedMotionProps> = motion(CKUText);

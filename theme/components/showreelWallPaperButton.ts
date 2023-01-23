@@ -15,16 +15,16 @@ const ShowreelWallpaperButton = helpers.defineMultiStyleConfig({
     baseStyle: {
         showReelWallPaperButton: {
             position: 'relative',
-            width: 'sizes.full',
+            width: 'full',
         },
         mask: {
             position: 'absolute',
             top: 0,
             left: 0,
-            width: 'sizes.full',
-            height: 'sizes.full',
-            zIndex: 'zIndices.base',
-            backgroundColor: 'gray.50',
+            width: 'full',
+            height: 'full',
+            zIndex: 'base',
+            backgroundColor: 'gray.700',
         },
     },
     sizes: {
@@ -36,21 +36,21 @@ const ShowreelWallpaperButton = helpers.defineMultiStyleConfig({
                 alignItem: 'center',
             },
             text: {
-                fontSize: 'fontSizes.lg',
+                fontSize: 'lg',
             }
         },
         md: {
             icon: {
-                width: 'sizes.12',
+                width: '12',
                 position: 'absolute',
-                bottom: 'sizes.4',
-                right: 'sizes.4',
+                bottom: '4',
+                right: '4',
             },
             text: {
                 position: 'absolute',
-                top: 'sizes.4',
-                right: 'sizes.4',
-                fontSize: 'fontSizes.xl',
+                top: '4',
+                right: '4',
+                fontSize: 'xl',
             }
         },
     }

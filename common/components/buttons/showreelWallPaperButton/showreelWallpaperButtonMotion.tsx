@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { forwardRef } from '@chakra-ui/react'; 
-import ShowreelWallpaperButtonUI, { MaskUI, ShowreelWallpaperButtonUIProps } from './ShowreelWallpaperButtonUI';
+import ShowreelWallpaperButtonUI, { ShowreelWallpaperButtonUIProps, MaskUI } from './ShowreelWallpaperButtonUI';
 import type { MotionVariants, MergeWithMotion, ReactFCWithRef } from '@/common/utils/typings';
 
 type MotionVariantTypes = 'hovered' | 'init';
@@ -17,7 +17,7 @@ const maskVariants: MotionVariants<MotionVariantTypes> = {
         opacity: 0,
     },
     hovered: {
-        opacity: 1,
+        opacity: 0.5,
     },
 };
 

@@ -1,4 +1,6 @@
-import { useStyles, Box, forwardRef, Image, ImageProps } from '@chakra-ui/react';
+import { Box, forwardRef, Image, ImageProps } from '@chakra-ui/react';
+
+import useProvidedMultipartStyles from '@/common/hooks/useProvidedMultipartStyles';
 
 export interface ShowreelWallpaperButtonUIProps {
     src: ImageProps['src'];
@@ -9,22 +11,26 @@ export interface ShowreelWallpaperButtonUIProps {
 const ShowreelWallpaperButtonUI = forwardRef<ShowreelWallpaperButtonUIProps, 'button'>((props, ref) => {
     const { src, alt, children } = props;
 
-    const styles = useStyles();
+    const styles = useProvidedMultipartStyles({ name: 'showReelWallPaperButton' });
 
     return (
-        <Box as="button" __css={styles.showReelWallPaperButton} ref={ref}>
+        <Box
+            ref={ref}
+            as="button"
+            __css={styles}
+        >
             <Image w="100%" src={src} alt={alt} />
             {children}
         </Box>
     );
 })
 
-export function MaskUI() {
-    const styles = useStyles();
+export const MaskUI = forwardRef<{}, 'div'>((_, ref) => {
+    const styles = useProvidedMultipartStyles({ name: 'mask' });
 
     return (
-        <Box __css={styles.mask} />
+        <Box ref={ref} __css={styles} />
     );
-}
+});
 
 export default ShowreelWallpaperButtonUI;

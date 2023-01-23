@@ -6,7 +6,6 @@ export const StylesProvider = createContext<Record<string, SystemStyleObject>>({
 function useProvidedMultipartStyles({ name }: { name: string }) {
     const styles = useContext(StylesProvider);
 
-    console.log('styles-->\n', styles);
     return styles[name];
 }
 
