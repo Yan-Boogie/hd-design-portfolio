@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { forwardRef } from '@chakra-ui/react'; 
-import ShowreelWallpaperButtonUI, { MaskUI, ShowreelWallpaperButtonUIProps } from './showreelWallPaperButtonUI';
-import type { MotionVariants } from '@/common/utils/typings';
+import ShowreelWallpaperButtonUI, { MaskUI, ShowreelWallpaperButtonUIProps } from './ShowreelWallpaperButtonUI';
+import type { MotionVariants, MergeWithMotion, ReactFCWithRef } from '@/common/utils/typings';
 
 type MotionVariantTypes = 'hovered' | 'init';
 
@@ -21,10 +21,11 @@ const maskVariants: MotionVariants<MotionVariantTypes> = {
     },
 };
 
-const MotionShowreelWallpaperButton = motion<ShowreelWallpaperButtonUIProps>(ShowreelWallpaperButtonUI);
-const MotionMask = motion(MaskUI);
+export interface ShowreelWallpaperButtonMotionProps extends MergedMotionProps {}
 
-export interface ShowreelWallpaperButtonMotionProps extends ShowreelWallpaperButtonUIProps {}
+type MergedMotionProps = MergeWithMotion<ShowreelWallpaperButtonUIProps>;
+const MotionShowreelWallpaperButton: ReactFCWithRef<MergedMotionProps> = motion(ShowreelWallpaperButtonUI);
+const MotionMask = motion(MaskUI);
 
 const ShowreelWallpaperButtonMotion = forwardRef<ShowreelWallpaperButtonMotionProps, 'button'>((props, ref) => {
     const { children, ...rest } = props;
