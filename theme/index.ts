@@ -11,7 +11,8 @@ import colors from './foundations/colors'
 import IconButtonStyle from './components/iconButton';
 import IconStyle from './components/icon';
 import ShowreelWallPaperButtonStyle from './components/showreelWallPaperButton';
-import TextStyle from './components/Text';
+import TextStyle from './components/text';
+import VideoContainerStyle from './components/videoPlayer';
 
 const overrides = {
   styles,
@@ -22,6 +23,7 @@ const overrides = {
     IconUI: IconStyle,
     ShowreelWallPaperButton: ShowreelWallPaperButtonStyle,
     Text: TextStyle,
+    VideoContainer: VideoContainerStyle,
   },
 }
 
