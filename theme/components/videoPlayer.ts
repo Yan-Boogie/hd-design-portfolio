@@ -4,13 +4,13 @@ const VideoContainerStyle = defineStyleConfig({
     baseStyle: {
         position: 'relative',
         overflow: 'hidden',
-        width: '1280px',
-        height: '720px',
+        width: { sm: '380px', md: '1280px' },
+        height: { sm: '220px', md: '720px' },
     },
-    sizes: {
-        sm: {
+    variants: {
+        thumbnail: {
             width: '380px',
-            height: '240px',
+            height: '220px',
         },
     }
 });
