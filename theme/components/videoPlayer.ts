@@ -1,4 +1,6 @@
-import { defineStyleConfig } from '@chakra-ui/react'
+import { defineStyleConfig } from '@chakra-ui/react';
+
+const CONTROL_PANEL_SIZE = '190px';
 
 const VideoContainerStyle = defineStyleConfig({
     baseStyle: {
@@ -9,8 +11,12 @@ const VideoContainerStyle = defineStyleConfig({
     },
     variants: {
         thumbnail: {
-            width: '380px',
-            height: '220px',
+            position: 'absolute',
+            width: `calc(100% + ${CONTROL_PANEL_SIZE})`,
+            height: `calc(100% + ${CONTROL_PANEL_SIZE})`,
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
         },
     }
 });

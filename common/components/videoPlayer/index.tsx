@@ -10,6 +10,10 @@ export interface VideoPlayerProps extends Omit<VideoPlayerUIProps, 'playerRef'> 
     thumbnail?: boolean;
 };
 
+/**
+ * @todo
+ * Refactor thumbnail feature to custom hook file
+ */
 const VideoPlayer = forwardRef<VideoPlayerProps, 'video'>((props, ref) => {
     const { thumbnail = false, children, ...rest } = props;
 
@@ -56,39 +60,43 @@ const VideoPlayer = forwardRef<VideoPlayerProps, 'video'>((props, ref) => {
         }
     });
 
-    // const onProgressHandler = ({ played, playedSeconds }: any) => {
-    //     if (!thumbnail || !refs.current?.getPlayerNode()) return;
+    const onProgressHandler = ({ playedSeconds }: any) => {
+        if (!thumbnail || !playerRef.current) return;
 
-    //     console.log('SECONDS', played, playedSeconds)
+        const playerNode = playerRef.current;
 
-    //     const playerNode = refs.current.getPlayerNode() as ReactPlayer;
-
-    //     if (played >= 4) playerNode.seekTo(0);
-    // };
+        if (playedSeconds >= 8) playerNode.seekTo(0);
+    };
 
     return (
-        <VideoPlayerUI
-            playing={playing}
-            playerRef={playerRef}
-            muted={thumbnail ? true : false}
-            controls={thumbnail ? false : true}
-            // progressInterval={5000}
-            // onProgress={onProgressHandler}
-            {...rest}>
-            {thumbnail ? (
-                <chakra.div
-                    id="preview-mask"
-                    ref={previewMaskRef}
-                    zIndex="base"
-                    pos="absolute"
-                    w="full"
-                    h="full"
-                    right="0"
-                    top="0">
-                    {children}
-                </chakra.div>
-            ) : children}
-        </VideoPlayerUI>
+        <chakra.div
+            pos="relative"
+            overflow="hidden"
+            w="380px"
+            h="220px">
+            <VideoPlayerUI
+                playing={playing}
+                playerRef={playerRef}
+                muted={thumbnail ? true : false}
+                controls={thumbnail ? false : true}
+                progressInterval={5000}
+                onProgress={onProgressHandler}
+                containerVariant="thumbnail"
+                {...rest}>
+                {thumbnail ? (
+                    <chakra.div
+                        ref={previewMaskRef}
+                        zIndex="base"
+                        pos="absolute"
+                        w="full"
+                        h="full"
+                        right="0"
+                        top="0">
+                        {children}
+                    </chakra.div>
+                ) : children}
+            </VideoPlayerUI>
+        </chakra.div>
     );
 })
 
