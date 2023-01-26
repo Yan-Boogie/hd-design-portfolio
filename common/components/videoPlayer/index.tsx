@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useImperativeHandle } from 'react';
 import { forwardRef, chakra } from '@chakra-ui/react';
 import type ReactPlayer from 'react-player/vimeo';
 import type { VideoPlayerUIProps } from './VideoPlayerUI';
@@ -21,6 +21,8 @@ const VideoPlayer = forwardRef<VideoPlayerProps, 'video'>((props, ref) => {
     
     const playerRef = useRef<ReactPlayer>(null);
     const previewMaskRef = useRef<HTMLDivElement>(null);
+
+    useImperativeHandle(ref, () => playerRef.current);
 
     useEffect(() => {
         if (!thumbnail || !previewMaskRef.current) return () => {};

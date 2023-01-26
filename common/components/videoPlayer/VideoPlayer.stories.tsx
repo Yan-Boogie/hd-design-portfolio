@@ -10,7 +10,5 @@ export default {
 const link = 'https://vimeo.com/714795278';
 
 export const Thumbnail = () => (
-    <VideoPlayer thumbnail url={link}>
-        <div>Testing</div>
-    </VideoPlayer>
+    <VideoPlayer thumbnail url={link} />
 );
