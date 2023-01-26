@@ -3,10 +3,12 @@ import type { SystemStyleObject } from '@chakra-ui/react';
 
 export const StylesProvider = createContext<Record<string, SystemStyleObject>>({});
 
-function useProvidedMultipartStyles({ name }: { name: string }) {
+function useProvidedMultipartStyles(options?: { name: string }) {
+    const name = options?.name;
+
     const styles = useContext(StylesProvider);
 
-    return styles[name];
+    return name ? styles[name] : styles;
 }
 
 export default useProvidedMultipartStyles;
