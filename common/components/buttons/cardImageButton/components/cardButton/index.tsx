@@ -1,6 +1,6 @@
-import CardButtonMotion, { CardButtonMotionProps } from './cardButtonMotion';
+import CardButtonMotion, { CardButtonMotionProps } from './CardButtonMotion';
 
-export * from './cardButtonMotion';
+export * from './CardButtonMotion';
 
 export type CardButtonProps = CardButtonMotionProps;
 export const CardButton = CardButtonMotion;

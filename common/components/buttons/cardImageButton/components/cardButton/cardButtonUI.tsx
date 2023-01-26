@@ -2,15 +2,16 @@ import {
     Box,
     Card as CKUCard,
     CardProps as CKUCardProps,
-    useStyles,
     forwardRef,
 } from '@chakra-ui/react';
+
+import useProvidedMultipartStyles from '@/common/hooks/useProvidedMultipartStyles';
 
 export interface CardButtonUIProps extends CKUCardProps {};
 
 const CardButtonUI = forwardRef<CardButtonUIProps, 'button'>((props, ref) => {
     const { ...rest } = props;
-    const styles = useStyles();
+    const styles = useProvidedMultipartStyles();
 
     return (
         <Box ref={ref} as="button">

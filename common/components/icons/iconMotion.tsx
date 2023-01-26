@@ -1,7 +1,7 @@
 import { motion, Variant } from 'framer-motion';
 import { chakra, forwardRef } from '@chakra-ui/react';
 
-import IconUI, { IconUIProps } from './iconUI';
+import IconUI, { IconUIProps } from './IconUI';
 import type { MergeWithMotion, ReactFCWithRef } from '@/common/utils/typings';
 
 type IconMotionVariantsTypes = 'inactive' | 'active' | 'hovered' | 'init';

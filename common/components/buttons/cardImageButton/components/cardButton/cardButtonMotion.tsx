@@ -5,7 +5,7 @@
 import { useRef, useImperativeHandle } from 'react';
 import { motion, Variant, useInView } from 'framer-motion';
 import { forwardRef } from '@chakra-ui/react';
-import CardButtonUI, { CardButtonUIProps } from './cardButtonUI';
+import CardButtonUI, { CardButtonUIProps } from './CardButtonUI';
 
 import type { MergeWithMotion, ReactFCWithRef } from 'common/utils/typings';
 import type { MotionVariantsTypes } from '../../types';
@@ -16,8 +16,8 @@ type CardButtonMotionVariants = {
 
 const cardButtonMotionVariants: CardButtonMotionVariants = {
     unviewed: { opacity: 0 },
-    unhovered: { opacity: 1 },
-    hovered: { opacity: 1, backgroundColor: 'brand.secondary', boxShadow: '10px 10px 5px rgba(0,0,0,0.5)' },
+    unhovered: { opacity: 1, backgroundColor: 'var(--chakra-colors-brand-primary)' },
+    hovered: { opacity: 1, backgroundColor: 'var(--chakra-colors-blue-400)', boxShadow: 'var(--chakra-shadows-base)' },
 };
 
 type MergedMotionProps = MergeWithMotion<CardButtonUIProps>;

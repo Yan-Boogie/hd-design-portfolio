@@ -1,7 +1,6 @@
-/** Deal with CardBody exist motion */
 import { motion, Variant } from 'framer-motion';
 import { forwardRef } from '@chakra-ui/react';
-import CardBodyUI, { CardBodyUIProps } from './cardBodyUI';
+import CardBodyUI, { CardBodyUIProps } from './CardBodyUI';
 
 import type { MergeWithMotion, ReactFCWithRef } from 'common/utils/typings';
 import type { MotionVariantsTypes } from '../../types';
@@ -13,7 +12,7 @@ type CardBodyMotionVariants = {
 const cardBodyMotionVariants: CardBodyMotionVariants = {
     unviewed: { opacity: 0 },
     unhovered: { opacity: 1 },
-    hovered: {},
+    hovered: { opacity: 1 },
 };
 
 type MergedMotionProps = MergeWithMotion<CardBodyUIProps>;

@@ -1,6 +1,6 @@
 import { forwardRef, Container, VStack } from '@chakra-ui/react';
 
-import Text from 'common/components/text';
+import Text from '@/common/components/text';
 import useProvidedMultipartStyles from '@/common/hooks/useProvidedMultipartStyles';
 
 export interface CardBodyUIProps {
@@ -13,10 +13,10 @@ const CardBodyUI = forwardRef<CardBodyUIProps, 'div'>((props, ref) => {
     const styles = useProvidedMultipartStyles();
 
     return (
-        <VStack>
-            <Text>{title}</Text>
+        <VStack ref={ref} __css={styles.cardBodyContainer}>
+            <Text sx={styles.cardBodyTitle}>{title}</Text>
             <Container>
-                <Text>{content}</Text>
+                <Text sx={styles.cardaBodyContent}>{content}</Text>
             </Container>
         </VStack>
     );

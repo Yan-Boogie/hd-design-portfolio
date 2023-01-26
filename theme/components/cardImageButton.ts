@@ -2,7 +2,8 @@ import { createMultiStyleConfigHelpers } from '@chakra-ui/styled-system'
 
 const helpers = createMultiStyleConfigHelpers([
     'cardButton',
-    'cardImage',
+    /** Card Image */
+    'cardImageContainer',
     /** Card Body */
     'cardBodyContainer',
     'cardBodyTitle',
@@ -13,19 +14,28 @@ const CardImageButtonStyle = helpers.defineMultiStyleConfig({
     baseStyle: {
         cardButton: {
             display: 'flex',
-        }
-    },
-    sizes: {
-        sm: {
-            cardButton: {
-                flexDirection: 'column',
-            }
+            flexDirection: { sm: 'column', md: 'row' },
+            border: '1px solid',
+            borderRadius: 'base',
         },
-        md: {
-            cardButton: {
-                flexDirection: 'row',
-            }
-        }
+        cardBodyContainer: {
+            width: 'full',
+            height: 'full',
+        },
+        cardImageContainer: {
+            width: 'full',
+            height: 'full',
+        },
+        cardBodyTitle: {
+            color: 'fontColors.primary',
+            fontSize: '2xl',
+            fontWeight: 'bold',
+        },
+        cardaBodyContent: {
+            color: 'fontColors.secondary',
+            fontSize: 'md',
+            fontWeight: 'normal',
+        },
     },
 });
 

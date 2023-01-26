@@ -1,7 +1,7 @@
 import { forwardRef } from '@chakra-ui/react';
 
-import IconMotion, { IconMotionProps } from '../iconMotion';
-import IconUI, { IconUIProps } from '../iconUI';
+import IconMotion, { IconMotionProps } from '../IconMotion';
+import IconUI, { IconUIProps } from '../IconUI';
 
 const InactivePath = () => (
     <>

@@ -1,6 +1,6 @@
-import CardBodyMotion, { CardBodyMotionProps } from './cardBodyMotion';
+import CardBodyMotion, { CardBodyMotionProps } from './CardBodyMotion';
 
-export * from './cardBodyMotion';
+export * from './CardBodyMotion';
 
-export type CardButtonProps = CardBodyMotionProps;
-export const CardButton = CardBodyMotion;
+export type CardBodyProps = CardBodyMotionProps;
+export const CardBody = CardBodyMotion;
