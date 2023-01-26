@@ -2,7 +2,7 @@ import { motion, Variant } from 'framer-motion';
 import { forwardRef } from '@chakra-ui/react';
 import CardImageUI, { CardImageUIProps } from './CardImageUI';
 
-import type { MergeWithMotion, ReactFCWithRef } from 'common/utils/typings';
+import type { MergeWithMotion, ReactFCWithRef } from '@/common/utils/typings';
 import type { MotionVariantsTypes } from '../../types';
 
 type CardImageMotionVariants = {

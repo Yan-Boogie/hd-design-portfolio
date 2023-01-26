@@ -21,11 +21,11 @@ const maskVariants: MotionVariants<MotionVariantTypes> = {
     },
 };
 
-export interface ShowreelWallpaperButtonMotionProps extends MergedMotionProps {}
-
 type MergedMotionProps = MergeWithMotion<ShowreelWallpaperButtonUIProps>;
 const MotionShowreelWallpaperButton: ReactFCWithRef<MergedMotionProps> = motion(ShowreelWallpaperButtonUI);
 const MotionMask = motion(MaskUI);
+
+export interface ShowreelWallpaperButtonMotionProps extends MergedMotionProps {}
 
 const ShowreelWallpaperButtonMotion = forwardRef<ShowreelWallpaperButtonMotionProps, 'button'>((props, ref) => {
     const { children, ...rest } = props;

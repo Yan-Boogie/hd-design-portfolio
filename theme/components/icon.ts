@@ -1,9 +1,6 @@
 import { defineStyleConfig } from '@chakra-ui/react'
 
 const IconStyle = defineStyleConfig({
-    sizes: {
-
-    },
     variants: {
         overlap: {
             position: 'absolute',
