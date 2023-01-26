@@ -6,13 +6,9 @@ import {
     forwardRef,
 } from '@chakra-ui/react';
 
-/**
- * @todo
- * - divider
- */
 export interface CardButtonUIProps extends CKUCardProps {};
 
-const CardButtonUI = forwardRef<CardButtonUIProps, "button">((props, ref) => {
+const CardButtonUI = forwardRef<CardButtonUIProps, 'button'>((props, ref) => {
     const { ...rest } = props;
     const styles = useStyles();
 

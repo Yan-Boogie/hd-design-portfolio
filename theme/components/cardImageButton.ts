@@ -3,10 +3,13 @@ import { createMultiStyleConfigHelpers } from '@chakra-ui/styled-system'
 const helpers = createMultiStyleConfigHelpers([
     'cardButton',
     'cardImage',
-    'cardBody',
+    /** Card Body */
+    'cardBodyContainer',
+    'cardBodyTitle',
+    'cardaBodyContent',
 ]);
 
-const CardButtonWithImage = helpers.defineMultiStyleConfig({
+const CardImageButtonStyle = helpers.defineMultiStyleConfig({
     baseStyle: {
         cardButton: {
             display: 'flex',
@@ -26,4 +29,4 @@ const CardButtonWithImage = helpers.defineMultiStyleConfig({
     },
 });
 
-export default CardButtonWithImage;
+export default CardImageButtonStyle;

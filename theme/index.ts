@@ -13,17 +13,18 @@ import IconStyle from './components/icon';
 import ShowreelWallPaperButtonStyle from './components/showreelWallPaperButton';
 import TextStyle from './components/text';
 import VideoContainerStyle from './components/videoPlayer';
+import CardImageButtonStyle from './components/cardImageButton';
 
 const overrides = {
   styles,
   colors,
-  // Other foundational style overrides go here
   components: {
     IconButton: IconButtonStyle,
     IconUI: IconStyle,
     ShowreelWallPaperButton: ShowreelWallPaperButtonStyle,
     Text: TextStyle,
     VideoContainer: VideoContainerStyle,
+    CardImageButton: CardImageButtonStyle,
   },
 }
 
