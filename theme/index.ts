@@ -13,8 +13,8 @@ import IconStyle from './components/icon';
 import ShowreelWallPaperButtonStyle from './components/showreelWallPaperButton';
 import TextStyle from './components/text';
 import VideoContainerStyle from './components/videoPlayer';
-import CardImageButtonStyle from './components/cardImageButton';
 import MenuIconButtonStyle from './components/menuItemButton';
+import IllustratorCardStyle from './components/illustratorCard';
 
 const overrides = {
   styles,
@@ -25,8 +25,8 @@ const overrides = {
     ShowreelWallPaperButton: ShowreelWallPaperButtonStyle,
     Text: TextStyle,
     VideoContainer: VideoContainerStyle,
-    CardImageButton: CardImageButtonStyle,
     MenuIconButton: MenuIconButtonStyle,
+    IllustratorCard: IllustratorCardStyle,
   },
 }
 
