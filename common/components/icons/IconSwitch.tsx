@@ -10,14 +10,14 @@ export type IconSwitchProps = { motionType: 'full' | 'none' | 'half' } & (IconMo
 
 const IconSwitch = forwardRef<IconSwitchProps, 'svg'>((props, ref) => {
     if (isIconUIProps(props)) {
-        const { fontSize = '6xl', ...rest } = props;
+        const { fontSize = ['4xl', '6xl'], ...rest } = props;
 
         return (
             <IconUI fontSize={fontSize} ref={ref} {...rest} />
         );
     }
 
-    const { fontSize = '6xl', motionType, pathBundle, ...rest } = props;
+    const { fontSize = ['4xl', '6xl'], motionType, pathBundle, ...rest } = props;
 
     if (motionType === 'half') return (
         <IconMotion
