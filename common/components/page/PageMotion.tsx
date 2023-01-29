@@ -2,7 +2,7 @@ import { motion, Variant } from 'framer-motion';
 import { forwardRef } from '@chakra-ui/react';
 import PageUI, { PageUIProps } from './PageUI';
 
-import type { MergeWithMotion, ReactFCWithRef } from 'common/utils/typings';
+import type { MergeWithMotion, ReactFCWithRef } from '@/common/utils/typings';
 
 type PageMotionVariantTypes = 'enter' | 'exit';
 type PageMotionVariants = {

@@ -1,6 +1,6 @@
 import { useMultiStyleConfig } from '@chakra-ui/react';
 
-import { StylesProvider } from '../../../hooks/useProvidedMultipartStyles';
+import { StylesProvider } from '@/common/hooks/useProvidedMultipartStyles';
 import ShowreelWallpaperButtonMotion, { ShowreelWallpaperButtonMotionProps } from './ShowreelWallpaperButtonMotion';
 import { CarouselRight } from '../../icons';
 import Text from '../../text';
