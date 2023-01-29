@@ -14,11 +14,10 @@ export default {
 } as ComponentMeta<typeof Page>;
 
 const PageWithContent = ({ idx, num }: { idx: number; num: number }) => {
-    console.log(idx, num);
-
     return idx === num ? (
         <Page>
             <chakra.div w="full" h="760px">
+                <Text as="h1">Page {idx + 1}</Text>
                 <Text>Page Content</Text>
                 <Text>Page Content</Text>
                 <Text>Page Content</Text>
@@ -38,8 +37,6 @@ const PageWithContent = ({ idx, num }: { idx: number; num: number }) => {
 
 export const PageWithTransition = () => {
     const [num, setNum] = useState<0 | 1>(0);
-
-    console.log(num);
 
     return (
         <chakra.div padding={2}>
