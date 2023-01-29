@@ -26,7 +26,7 @@ export interface TextMotionProps extends MergedMotionProps {
 };
 
 const MotionText: ReactFCWithRef<MergedMotionProps> = motion(CKUText);
-const TextMotion = forwardRef<TextMotionProps, 'p'>((props, ref) => {
+const TextMotion = forwardRef<TextMotionProps, any>((props, ref) => {
     const { initial, animate, ...rest } = props;
 
     return (

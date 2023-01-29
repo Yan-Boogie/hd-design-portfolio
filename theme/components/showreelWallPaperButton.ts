@@ -3,14 +3,10 @@ import { createMultiStyleConfigHelpers } from '@chakra-ui/styled-system'
 const helpers = createMultiStyleConfigHelpers([
     'showReelWallPaperButton',
     'mask',
-    'icon',
+    'iconBlock',
     'text',
 ]);
 
-/**
- * @todos
- * - Deal with z-index
- */
 const ShowreelWallpaperButton = helpers.defineMultiStyleConfig({
     baseStyle: {
         showReelWallPaperButton: {
@@ -26,34 +22,20 @@ const ShowreelWallpaperButton = helpers.defineMultiStyleConfig({
             zIndex: 'base',
             backgroundColor: 'gray.700',
         },
+        iconBlock: {
+            position: 'absolute',
+            zIndex: 'docked',
+            bottom: { sm: '20%', md: 12 },
+            right: { sm: '20%', md: 12 },
+        },
+        text: {
+            position: 'absolute',
+            top: '20%',
+            left: '10%',
+            zIndex: 'docked',
+            display: { sm: 'none', md: 'inherit' },
+        }
     },
-    sizes: {
-        sm: {
-            showReelWallPaperButton: {
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItem: 'center',
-            },
-            text: {
-                fontSize: 'lg',
-            }
-        },
-        md: {
-            icon: {
-                width: '12',
-                position: 'absolute',
-                bottom: '4',
-                right: '4',
-            },
-            text: {
-                position: 'absolute',
-                top: '4',
-                right: '4',
-                fontSize: 'xl',
-            }
-        },
-    }
 });
 
 export default ShowreelWallpaperButton;
