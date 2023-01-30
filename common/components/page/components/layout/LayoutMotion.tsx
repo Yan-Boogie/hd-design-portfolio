@@ -52,8 +52,6 @@ const LayoutMotion = forwardRef<LayoutMotionProps, 'div'>((props, ref) => {
     return (
         <MotionLayout
             initial={{ opacity: 0 }}
-            // animate="enter"
-            // exit="exit"
             variants={layoutVariants}
             ref={ref}
             {...rest}>
