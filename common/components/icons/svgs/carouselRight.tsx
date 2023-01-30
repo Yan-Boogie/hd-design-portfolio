@@ -40,7 +40,7 @@ export const CarouselRight = forwardRef<IconSwitchProps, 'div' | 'svg'>((props, 
     return (
         <IconSwitch
             ref={ref}
-            viewBox='0 0 270.12 264.99'
+            viewBox="0 0 270.12 264.99"
             pathBundle={[<InactivePath key="inactive" />, <ActivePath key="active" />]}
             {...rest} />
     );

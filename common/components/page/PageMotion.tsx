@@ -1,13 +1,9 @@
-import { motion, Variant } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { forwardRef } from '@chakra-ui/react';
 import PageUI, { PageUIProps } from './PageUI';
 
 import type { MergeWithMotion, ReactFCWithRef } from '@/common/utils/typings';
-
-type PageMotionVariantTypes = 'enter' | 'exit';
-type PageMotionVariants = {
-    [_key in PageMotionVariantTypes]: Variant;
-};
+import type { PageMotionVariants } from './types';
 
 const pageVariants: PageMotionVariants = {
     enter: { opacity: 1, transition: { when: 'beforeChildren' } },

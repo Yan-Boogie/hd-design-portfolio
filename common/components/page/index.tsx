@@ -4,6 +4,7 @@ import { forwardRef, useMultiStyleConfig } from '@chakra-ui/react';
 import { StylesProvider } from '@/common/hooks/useProvidedMultipartStyles';
 import PageMotion, { PageMotionProps } from './PageMotion';
 import Transition from './components/transition';
+import Layout from './components/layout';
 
 export interface PageProps extends PageMotionProps {};
 
@@ -15,7 +16,9 @@ const Page = forwardRef<PageProps, 'div'>((props, ref) => {
         <StylesProvider.Provider value={styles}>
             <AnimatePresence exitBeforeEnter>
                 <PageMotion ref={ref} {...rest}>
-                    {children}
+                    <Layout>
+                        {children}
+                    </Layout>
                     <AnimatePresence exitBeforeEnter>
                         <Transition />
                     </AnimatePresence>

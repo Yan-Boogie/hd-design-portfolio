@@ -16,7 +16,7 @@ export default {
 const PageWithContent = ({ idx, num }: { idx: number; num: number }) => {
     return idx === num ? (
         <Page>
-            <chakra.div w="full" h="760px">
+            <chakra.div w="full" h="1680px">
                 <Text as="h1">Page {idx + 1}</Text>
                 <Text>Page Content</Text>
                 <Text>Page Content</Text>
@@ -40,7 +40,7 @@ export const PageWithTransition = () => {
 
     return (
         <chakra.div padding={2}>
-            <IconButton aria-label="siwtch" onClick={() => setNum(prev => prev === 1 ? 0 : 1)}>
+            <IconButton aria-label="switch" onClick={() => setNum(prev => prev === 1 ? 0 : 1)}>
                 <CarouselRight motionType="full" />
             </IconButton>
             <Divider orientation="horizontal" />
