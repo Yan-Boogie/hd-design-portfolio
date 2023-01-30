@@ -19,7 +19,7 @@ const ShowreelWallpaperButtonUI = forwardRef<ShowreelWallpaperButtonUIProps, 'bu
             as="button"
             __css={styles}
         >
-            <Image w="100%" src={src} alt={alt} />
+            <Image w="100%" maxWidth="1280px" src={src} alt={alt} />
             {children}
         </Box>
     );

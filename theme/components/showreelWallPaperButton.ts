@@ -11,7 +11,11 @@ const ShowreelWallpaperButton = helpers.defineMultiStyleConfig({
     baseStyle: {
         showReelWallPaperButton: {
             position: 'relative',
-            width: 'full',
+            width: '100vw',
+            backgroundColor: 'gray.900',
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'center',
         },
         mask: {
             position: 'absolute',

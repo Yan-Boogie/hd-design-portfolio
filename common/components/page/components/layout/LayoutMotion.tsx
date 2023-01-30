@@ -46,8 +46,8 @@ const LayoutMotion = forwardRef<LayoutMotionProps, 'div'>((props, ref) => {
     }, [scrollY, isFooterInView]);
 
     useEffect(() => {
-        if (isFooterInView) setHeaderVariant('hidden');
-    }, [isFooterInView]);
+        if (isFooterInView && scrollY.get() > 0) setHeaderVariant('hidden');
+    }, [isFooterInView, scrollY]);
 
     return (
         <MotionLayout
