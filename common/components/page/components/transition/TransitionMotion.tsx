@@ -11,7 +11,7 @@ type TransitionMotionVariants = {
 
 const transitionVariants: TransitionMotionVariants = {
     hidden: { scaleX: 2, x: 500},
-    show: { scaleX: 3, x: -5000 },
+    show: { scaleX: 3, x: -10000 },
     hide: { scaleX: 2, x: 1200 },
 };
 

@@ -40,6 +40,7 @@ const PageStyle = helpers.defineMultiStyleConfig({
         },
         layout: {
             width: 'full',
+            minHeight: '100vh',
             display: 'flex',
             flexDirection: 'column',
         },
@@ -51,8 +52,11 @@ const PageStyle = helpers.defineMultiStyleConfig({
             flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'space-between',
-            padding: 4,
+            padding: 'var(--chakra-space-8) var(--chakra-space-20)',
             backgroundColor: 'brand.primary',
+        },
+        body: {
+            flexGrow: 1,
         },
         footer: {
             position: 'relative',
@@ -60,14 +64,12 @@ const PageStyle = helpers.defineMultiStyleConfig({
             height: 40,
             display: 'flex',
             flexDirection: 'row',
+            alignItems: 'center',
             justifyContent: 'flex-end',
             overflow: 'hidden',
+            padding: 'var(--chakra-space-8) var(--chakra-space-20)',
         },
         footerLink: {
-            position: 'absolute',
-            right: 4,
-            top: '50%',
-            transform: 'translateY(-50%)',
             zIndex: 'docked',
         },
         footerBG: {

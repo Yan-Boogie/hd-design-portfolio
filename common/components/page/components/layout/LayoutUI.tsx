@@ -5,6 +5,19 @@ import useProvidedMultipartStyles from '@/common/hooks/useProvidedMultipartStyle
 import IconButton from '@/common/components/buttons/iconButton';
 import { CarouselRight, GeometryBG } from '@/common/components/icons';
 
+export interface BodyUIProps {
+    children: React.ReactNode;
+};
+export const BodyUI = forwardRef<BodyUIProps, 'div'>((props, ref) => {
+    const styles = useProvidedMultipartStyles({ name: 'body' });
+
+    return (
+        <chakra.div __css={styles} ref={ref}>
+            {props.children}
+        </chakra.div>
+    );
+})
+
 export const HeaderUI = forwardRef<{}, 'div'>((_, ref) => {
     const styles = useProvidedMultipartStyles({ name: 'header' });
 

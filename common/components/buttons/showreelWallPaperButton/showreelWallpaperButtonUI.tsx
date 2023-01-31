@@ -8,6 +8,10 @@ export interface ShowreelWallpaperButtonUIProps {
     children: React.ReactNode;
 };
 
+/**
+ * @todo
+ * - Refactor the Image style
+ */
 const ShowreelWallpaperButtonUI = forwardRef<ShowreelWallpaperButtonUIProps, 'button'>((props, ref) => {
     const { src, alt, children } = props;
 
@@ -19,7 +23,8 @@ const ShowreelWallpaperButtonUI = forwardRef<ShowreelWallpaperButtonUIProps, 'bu
             as="button"
             __css={styles}
         >
-            <Image w="100%" maxWidth="1280px" src={src} alt={alt} />
+            {/* This styling way is really bad!! */}
+            <Image maxHeight="calc(100vh - 312px)" src={src} alt={alt} />
             {children}
         </Box>
     );
