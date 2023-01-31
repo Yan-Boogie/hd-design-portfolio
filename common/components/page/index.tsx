@@ -6,19 +6,25 @@ import PageMotion, { PageMotionProps } from './PageMotion';
 import Transition from './components/transition';
 import Layout from './components/layout';
 
-export interface PageProps extends PageMotionProps {};
+export interface PageProps extends PageMotionProps {
+    withLayout?: boolean;
+};
 
 const Page = forwardRef<PageProps, 'div'>((props, ref) => {
-    const { children, ...rest } = props;
+    const { children, withLayout = true, ...rest } = props;
     const styles = useMultiStyleConfig('Page');
+
+    const renderChildren = () => withLayout ? (
+        <Layout>
+            {children}
+        </Layout>
+    ) : children;
 
     return (
         <StylesProvider.Provider value={styles}>
             <AnimatePresence exitBeforeEnter>
                 <PageMotion ref={ref} {...rest}>
-                    <Layout>
-                        {children}
-                    </Layout>
+                    {renderChildren()}
                     <AnimatePresence exitBeforeEnter>
                         <Transition />
                     </AnimatePresence>
